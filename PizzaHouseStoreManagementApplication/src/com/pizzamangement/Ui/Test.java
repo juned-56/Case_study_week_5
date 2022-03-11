@@ -31,3 +31,55 @@ public class Test {
 //		service.deletePizza(pizza1);
 	}
 }
+
+
+
+
+
+
+
+============================================Output========================================
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+	
+	
+	
+practice=# select * from pizza;
+ pizzano |        deliveryadd         | pizzaprice | pizzatype
+---------+----------------------------+------------+-----------
+      11 | sitapura sector-12, jaipur |        249 | Margeta
+      12 | thane sector-17, mumbai    |        349 | Margeta
+(2 rows)
+
+	 
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+Hibernate: update pizza set DeliveryAdd=?, pizzaPrice=?, pizzaType=? where pizzaNo=?
+
+	
+practice=# select * from pizza;
+ pizzano |        deliveryadd         | pizzaprice |  pizzatype
+---------+----------------------------+------------+--------------
+      12 | thane sector-17, mumbai    |        349 | Margeta
+      11 | sitapura sector-12, jaipur |        270 | cheese pizza
+(2 rows)
+
+
+	 
+Pizza No: 11
+Pizza Type: Margeta
+Pizza Price: 249
+Pizza Dilevry Address: sitapura sector-12, jaipur
+
+
+
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+Hibernate: insert into pizza (DeliveryAdd, pizzaPrice, pizzaType, pizzaNo) values (?, ?, ?, ?)
+Hibernate: delete from pizza where pizzaNo=?
+	
+	
+practice=# select * from pizza;
+ pizzano |        deliveryadd         | pizzaprice | pizzatype
+---------+----------------------------+------------+-----------
+      11 | sitapura sector-12, jaipur |        249 | Margeta
+(1 row)
